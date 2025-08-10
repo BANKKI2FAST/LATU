@@ -10,12 +10,6 @@
   </a>&nbsp;
   <a href="https://www.instagram.com/luchukomol/">
     <img src="https://img.shields.io/badge/Instagram-%40luchukomol-E4405F?logo=instagram&logoColor=white">
-  </a>&nbsp;
-  <a href=xxxxxxx>
-    <img src="https://img.shields.io/badge/Google%20Drive-Portfolio-4285F4?logo=googledrive&logoColor=white">
-  </a>&nbsp;
-  <a href="https://app.capacities.io/home/0eb8a3d1-be87-4aa8-a347-20d61b8ca710">
-    <img src="https://img.shields.io/badge/Capacities-Projects-6C63FF">
   </a>
 </p>
 
