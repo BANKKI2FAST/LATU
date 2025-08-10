@@ -4,13 +4,18 @@
   <em>Creative Space for Photography Projects & Dance Ideas</em>
 </p>
 
-<!-- BADGES -->
 <p align="center">
-  <a href="https://www.behance.net/latuchukomol" target="_blank">
-    <img src="https://img.shields.io/badge/Behance-Portfolio-blue?style=flat-square&logo=behance" alt="Behance Portfolio">
-  </a>
-  <a href="https://www.instagram.com/luchukomol/" target="_blank">
-    <img src="https://img.shields.io/badge/Instagram-@luchukomol-purple?style=flat-square&logo=instagram" alt="Instagram Profile">
+  <a href="https://www.behance.net/latuchukomol">
+    <img src="https://img.shields.io/badge/Behance-Portfolio-1769ff?logo=behance&logoColor=white">
+  </a>&nbsp;
+  <a href="https://www.instagram.com/luchukomol/">
+    <img src="https://img.shields.io/badge/Instagram-%40luchukomol-E4405F?logo=instagram&logoColor=white">
+  </a>&nbsp;
+  <a href="https://drive.google.com/drive/folders/1zcgKTGQw5DTQg4E_nhiRaPD5ne5pZQ4y?usp=sharing">
+    <img src="https://img.shields.io/badge/Google%20Drive-Portfolio-4285F4?logo=googledrive&logoColor=white">
+  </a>&nbsp;
+  <a href="https://app.capacities.io/home/0eb8a3d1-be87-4aa8-a347-20d61b8ca710">
+    <img src="https://img.shields.io/badge/Capacities-Projects-6C63FF">
   </a>
 </p>
 
