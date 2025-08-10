@@ -47,7 +47,7 @@ Here you’ll find a curated selection of my photography projects, dance concept
 ## 📫 Connect with Me
 - **Behance:** [behance.net/latuchukomol](https://www.behance.net/latuchukomol)  
 - **Instagram:** [@luchukomol](https://www.instagram.com/luchukomol/)  
-- **Email:** *[your email here]*  
+- **Email:** *[bankki2fastpic@gmail.com]*  
 
 ---
 
