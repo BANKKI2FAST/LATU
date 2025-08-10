@@ -1,0 +1,1268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luchukomol – Photo & Dance Portfolio</title>
+    <meta name="description" content="Luchukomol's official portfolio showcasing photography projects, dance concepts, and creative content creation skills.">
+    <meta name="keywords" content="Luchukomol, photography, dance, portfolio, creative professional, social media, content creator, photo shoots, dance covers, TikTok, Behance, Instagram">
+    <meta name="author" content="Luchukomol">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Animate.css -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" rel="stylesheet">
+    
+    <!-- AOS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+    
+    <style>
+        /* General Body Styles */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8f9fa;
+            color: #333;
+            line-height: 1.6;
+            scroll-behavior: smooth;
+            overflow-x: hidden;
+        }
+
+        /* Modern Hero Section with Split Layout */
+        .hero {
+            min-height: 100vh;
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(
+                45deg,
+                rgba(102, 126, 234, 0.9) 0%,
+                rgba(118, 75, 162, 0.8) 50%,
+                rgba(255, 154, 158, 0.7) 100%
+            );
+            z-index: 1;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 3;
+            color: white;
+        }
+
+        .hero-bg-images {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            z-index: 0;
+            opacity: 0.3;
+        }
+
+        .hero-bg-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: repeat(3, 1fr);
+            height: 100vh;
+            gap: 2px;
+        }
+
+        .hero-bg-item {
+            background-size: cover;
+            background-position: center;
+            filter: grayscale(60%);
+            transition: all 0.8s ease;
+            background-color: rgba(102, 126, 234, 0.2);
+        }
+
+        /* Fixed image URLs for hero background grid */
+        .hero-bg-item:nth-child(1) { background-image: url('https://mir-s3-cdn-cf.behance.net/project_modules/source/151008222907947.67eefd419dcd2.jpg'); }
+        .hero-bg-item:nth-child(2) { background-image: url('https://mir-s3-cdn-cf.behance.net/project_modules/source/93aa69222907947.67eefddbd3227.jpg'); }
+        .hero-bg-item:nth-child(3) { background-image: url('https://mir-s3-cdn-cf.behance.net/project_modules/source/0fe1db223013739.67f1333a9abb2.jpg'); }
+        .hero-bg-item:nth-child(4) { background-image: url('https://mir-s3-cdn-cf.behance.net/project_modules/source/fd5d72227629025.6843515be3167.jpg'); }
+        .hero-bg-item:nth-child(5) { background-image: url('https://mir-s3-cdn-cf.behance.net/project_modules/source/ee14fd223041717.67f1d93891492.jpg'); }
+        .hero-bg-item:nth-child(6) { background-image: url('https://mir-s3-cdn-cf.behance.net/project_modules/source/86ab49222998213.67f0e5bf94d91.jpg'); }
+        .hero-bg-item:nth-child(7) { background-image: url('https://mir-s3-cdn-cf.behance.net/project_modules/source/a541df222998213.67f0e5bf977dc.jpg'); }
+        .hero-bg-item:nth-child(8) { background-image: url('https://mir-s3-cdn-cf.behance.net/project_modules/source/c50064222998213.67f0e5bf958dc.jpg'); }
+        .hero-bg-item:nth-child(9) { background-image: url('https://mir-s3-cdn-cf.behance.net/project_modules/source/beb994226592581.6830d3593b01b.jpg'); }
+        .hero-bg-item:nth-child(10) { background-image: url('https://mir-s3-cdn-cf.behance.net/project_modules/source/368905226592581.6830d3592df97.jpg'); }
+        .hero-bg-item:nth-child(11) { background-image: url('https://mir-s3-cdn-cf.behance.net/project_modules/source/ed4864226592581.6830cb8200b34.jpg'); }
+        .hero-bg-item:nth-child(12) { background-image: url('https://mir-s3-cdn-cf.behance.net/project_modules/source/ec6d98226592581.6830cb8202b75.jpg'); }
+
+        .hero:hover .hero-bg-item {
+            filter: grayscale(20%);
+            transform: scale(1.05);
+        }
+
+        .hero-main-title {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(4rem, 8vw, 8rem);
+            font-weight: 900;
+            line-height: 0.9;
+            margin-bottom: 1rem;
+            background: linear-gradient(135deg, #fff, #f0f0f0, #fff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-shadow: none;
+            position: relative;
+        }
+
+        @supports not (-webkit-background-clip: text) {
+            .hero-main-title {
+                color: #fff;
+                text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+            }
+        }
+
+        .hero-main-title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 0;
+            width: 100px;
+            height: 4px;
+                        background: linear-gradient(90deg, #ff9a9e, #fecfef, #fecfef);
+            border-radius: 2px;
+            animation: expandLine 2s ease-out 1s both;
+        }
+
+        @keyframes expandLine {
+            from { width: 0; }
+            to { width: 100px; }
+        }
+
+        .hero-subtitle {
+            font-size: clamp(1.2rem, 3vw, 1.8rem);
+            font-weight: 300;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+            letter-spacing: 1px;
+        }
+
+        .hero-description {
+            font-size: clamp(1rem, 2.5vw, 1.3rem);
+            font-weight: 400;
+            margin-bottom: 3rem;
+            max-width: 600px;
+            opacity: 0.8;
+            line-height: 1.6;
+        }
+
+        .hero-stats {
+            display: flex;
+            gap: 3rem;
+            margin-bottom: 3rem;
+            flex-wrap: wrap;
+        }
+
+        .hero-stat {
+            text-align: center;
+        }
+
+        .hero-stat-number {
+            font-size: 2.5rem;
+            font-weight: 700;
+            display: block;
+            background: linear-gradient(135deg, #ff9a9e, #fecfef);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        @supports not (-webkit-background-clip: text) {
+            .hero-stat-number {
+                color: #ff9a9e;
+            }
+        }
+
+        .hero-stat-label {
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            opacity: 0.8;
+            font-weight: 500;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+
+        .btn-primary-hero {
+            background: linear-gradient(135deg, #ff9a9e, #fecfef);
+            border: none;
+            padding: 1rem 2.5rem;
+            font-size: 1.1rem;
+            font-weight: 600;
+            border-radius: 50px;
+            color: #333;
+            text-decoration: none;
+            position: relative;
+            overflow: hidden;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            box-shadow: 0 10px 30px rgba(255, 154, 158, 0.3);
+            display: inline-flex;
+            align-items: center;
+        }
+
+        .btn-primary-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent);
+            transition: left 0.6s ease;
+        }
+
+        .btn-primary-hero:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px rgba(255, 154, 158, 0.4);
+            color: #333;
+            text-decoration: none;
+        }
+
+        .btn-primary-hero:hover::before {
+            left: 100%;
+        }
+
+        .btn-secondary-hero {
+            background: transparent;
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            padding: 1rem 2.5rem;
+            font-size: 1.1rem;
+            font-weight: 500;
+            border-radius: 50px;
+            color: white;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            backdrop-filter: blur(10px);
+            display: inline-flex;
+            align-items: center;
+        }
+
+        .btn-secondary-hero:hover {
+            background: rgba(255, 255, 255, 0.1);
+            border-color: rgba(255, 255, 255, 0.5);
+            transform: translateY(-2px);
+            color: white;
+            text-decoration: none;
+        }
+
+        .hero-scroll-indicator {
+            position: absolute;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 3;
+            color: white;
+            text-align: center;
+            opacity: 0.7;
+            animation: bounce 2s infinite;
+        }
+
+        .hero-scroll-indicator i {
+            font-size: 1.5rem;
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+
+        .hero-scroll-indicator span {
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-weight: 500;
+        }
+
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% { transform: translateX(-50%) translateY(0); }
+            40% { transform: translateX(-50%) translateY(-10px); }
+            60% { transform: translateX(-50%) translateY(-5px); }
+        }
+
+        .hero-floating-elements {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            z-index: 2;
+            pointer-events: none;
+        }
+
+        .floating-icon {
+            position: absolute;
+            color: rgba(255, 255, 255, 0.1);
+            font-size: 2rem;
+            animation: float 6s ease-in-out infinite;
+        }
+
+        .floating-icon:nth-child(1) { top: 20%; left: 10%; animation-delay: 0s; }
+        .floating-icon:nth-child(2) { top: 40%; right: 15%; animation-delay: 1s; }
+        .floating-icon:nth-child(3) { bottom: 30%; left: 20%; animation-delay: 2s; }
+        .floating-icon:nth-child(4) { top: 60%; right: 25%; animation-delay: 3s; }
+        .floating-icon:nth-child(5) { bottom: 20%; right: 10%; animation-delay: 4s; }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px) rotate(0deg); }
+            33% { transform: translateY(-20px) rotate(5deg); }
+            66% { transform: translateY(10px) rotate(-3deg); }
+        }
+
+        /* Section styling updates */
+        section {
+            padding: 80px 20px;
+            transition: background-color 0.3s ease;
+        }
+        
+        section:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+        
+        section:nth-child(odd) {
+            background-color: #ffffff;
+        }
+
+        .section-title {
+            font-family: 'Playfair Display', serif;
+            text-align: center;
+            margin-bottom: 50px;
+            font-size: 3rem;
+            font-weight: 700;
+            color: #667eea;
+            position: relative;
+            padding-bottom: 15px;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            left: 50%;
+            bottom: 0;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background: linear-gradient(90deg, #667eea, #764ba2);
+            border-radius: 2px;
+        }
+
+        /* Enhanced Gallery Carousel Styles */
+        #galleryCarousel .carousel-item img {
+            border-radius: 12px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+            transition: all 0.4s ease;
+            height: 500px;
+            object-fit: cover;
+            width: 100%;
+        }
+
+        #galleryCarousel:hover .carousel-item img {
+            transform: scale(1.02);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+        }
+
+        #galleryCarousel .carousel-caption {
+            background: rgba(0,0,0,0.7);
+            border-radius: 8px;
+            padding: 20px;
+            bottom: 30px;
+            left: 50%;
+            right: auto;
+            transform: translateX(-50%);
+            width: 80%;
+            max-width: 500px;
+            transition: all 0.3s ease;
+        }
+
+        #galleryCarousel:hover .carousel-caption {
+            background: rgba(0,0,0,0.8);
+            transform: translateX(-50%) translateY(-5px);
+        }
+
+        #galleryCarousel .carousel-caption h5 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            color: #fff;
+        }
+
+        #galleryCarousel .carousel-caption p {
+            font-size: 1rem;
+            margin-bottom: 0;
+            opacity: 0.9;
+        }
+
+        #galleryCarousel .carousel-control-prev,
+        #galleryCarousel .carousel-control-next {
+            transition: all 0.3s ease;
+            width: 5%;
+        }
+
+        #galleryCarousel .carousel-control-prev:hover,
+        #galleryCarousel .carousel-control-next:hover {
+            background: rgba(102, 126, 234, 0.1);
+        }
+
+        #galleryCarousel .carousel-indicators {
+            bottom: -50px;
+        }
+
+        #galleryCarousel .carousel-indicators [data-bs-target] {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background-color: rgba(102, 126, 234, 0.5);
+            border: none;
+            transition: all 0.3s ease;
+        }
+
+        #galleryCarousel .carousel-indicators .active {
+            background-color: #667eea;
+            transform: scale(1.2);
+        }
+
+        /* Card Styles */
+        .card {
+            background-color: #ffffff;
+            border: 1px solid #e0e0e0;
+            border-radius: 12px;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            color: #333;
+            height: 100%;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .card:hover {
+            transform: translateY(-10px) scale(1.02);
+            box-shadow: 0 20px 40px rgba(102, 126, 234, 0.15);
+            border-color: #667eea;
+        }
+
+        .featured-project-card {
+            position: relative;
+            overflow: hidden;
+            cursor: pointer;
+        }
+
+        .featured-project-card .card-img-top {
+            height: 250px;
+            object-fit: cover;
+            transition: all 0.4s ease;
+            filter: brightness(0.9);
+        }
+
+        .featured-project-card:hover .card-img-top {
+            transform: scale(1.08);
+            filter: brightness(1.1);
+        }
+
+        .project-badge {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            padding: 8px 12px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            z-index: 3;
+        }
+
+        .project-link {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .project-link:hover {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+
+        .connect-links {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+        }
+
+        .connect-links a {
+            font-size: 1.4rem;
+            color: #667eea;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            padding: 10px 20px;
+            border-radius: 25px;
+            background: rgba(102, 126, 234, 0.1);
+        }
+
+        .connect-links a:hover {
+            color: #fff;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            transform: translateY(-5px);
+            text-decoration: none;
+        }
+
+        .list-group-item {
+            background-color: #ffffff;
+            color: #333;
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            margin-bottom: 10px;
+            padding: 15px 20px;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+        }
+
+        .list-group-item:hover {
+            transform: translateX(10px);
+            border-color: #667eea;
+            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.15);
+        }
+
+        footer {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: #fff;
+            text-align: center;
+            padding: 30px;
+            font-style: italic;
+            font-size: 1.2rem;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 992px) {
+            .hero-bg-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+            
+            .hero-stats {
+                gap: 2rem;
+                justify-content: center;
+            }
+            
+            .hero-buttons {
+                justify-content: center;
+            }
+
+            #galleryCarousel .carousel-item img {
+                height: 400px;
+            }
+
+            #galleryCarousel .carousel-caption {
+                width: 90%;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .hero {
+                text-align: center;
+                padding: 0 1rem;
+            }
+            
+            .hero-bg-grid {
+                grid-template-columns: repeat(2, 1fr);
+                grid-template-rows: repeat(6, 1fr);
+            }
+            
+            .hero-stats {
+                gap: 1.5rem;
+            }
+            
+            .hero-stat-number {
+                font-size: 2rem;
+            }
+            
+            .btn-primary-hero,
+            .btn-secondary-hero {
+                padding: 0.8rem 2rem;
+                font-size: 1rem;
+            }
+
+            .section-title {
+                font-size: 2.5rem;
+            }
+
+            section {
+                padding: 60px 15px;
+            }
+
+            #galleryCarousel .carousel-item img {
+                height: 300px;
+            }
+
+            #galleryCarousel .carousel-caption {
+                width: 95%;
+                padding: 15px;
+                bottom: 20px;
+            }
+
+            #galleryCarousel .carousel-caption h5 {
+                font-size: 1.2rem;
+            }
+
+            #galleryCarousel .carousel-caption p {
+                font-size: 0.9rem;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .hero-bg-grid {
+                                grid-template-columns: 1fr;
+                grid-template-rows: repeat(12, 1fr);
+            }
+            
+            .hero-buttons {
+                flex-direction: column;
+                align-items: stretch;
+            }
+            
+            .btn-primary-hero,
+            .btn-secondary-hero {
+                width: 100%;
+                max-width: 300px;
+                margin: 0 auto;
+                justify-content: center;
+            }
+            
+            .floating-icon {
+                display: none;
+            }
+
+            .hero-main-title {
+                font-size: clamp(2.5rem, 8vw, 4rem);
+            }
+
+            .section-title {
+                font-size: 2rem;
+            }
+
+            #galleryCarousel .carousel-item img {
+                height: 250px;
+            }
+
+            #galleryCarousel .carousel-indicators {
+                bottom: -40px;
+            }
+        }
+
+        /* Error handling for broken images */
+        .hero-bg-item {
+            background-repeat: no-repeat;
+        }
+
+        .hero-bg-item::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(102, 126, 234, 0.1);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        /* Prefers reduced motion accessibility */
+        @media (prefers-reduced-motion: reduce) {
+            * {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+            }
+            
+            .hero-scroll-indicator {
+                animation: none;
+            }
+            
+            .floating-icon {
+                animation: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Redesigned Hero Section -->
+    <header class="hero">
+        <!-- Background Grid of Images -->
+        <div class="hero-bg-images">
+            <div class="hero-bg-grid">
+                <div class="hero-bg-item"></div>
+                <div class="hero-bg-item"></div>
+                <div class="hero-bg-item"></div>
+                <div class="hero-bg-item"></div>
+                <div class="hero-bg-item"></div>
+                <div class="hero-bg-item"></div>
+                <div class="hero-bg-item"></div>
+                <div class="hero-bg-item"></div>
+                <div class="hero-bg-item"></div>
+                <div class="hero-bg-item"></div>
+                <div class="hero-bg-item"></div>
+                <div class="hero-bg-item"></div>
+            </div>
+        </div>
+
+        <!-- Floating Elements -->
+        <div class="hero-floating-elements">
+            <i class="floating-icon fas fa-camera"></i>
+            <i class="floating-icon fas fa-music"></i>
+            <i class="floating-icon fas fa-palette"></i>
+            <i class="floating-icon fas fa-heart"></i>
+            <i class="floating-icon fas fa-star"></i>
+        </div>
+
+        <!-- Main Content -->
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 hero-content">
+                    <h1 class="hero-main-title animate__animated animate__fadeInUp">
+                       LAT Luchukomol
+                    </h1>
+                    
+                    <p class="hero-subtitle animate__animated animate__fadeInUp animate__delay-1s">
+                        <i class="fas fa-camera me-2"></i>
+                        Creative Visual Storyteller
+                    </p>
+                    
+                    <p class="hero-description animate__animated animate__fadeInUp animate__delay-2s">
+                        Blending photography, dance, and creative content to capture authentic moments and artistic expression. Welcome to my creative universe where every frame tells a story.
+                    </p>
+                    
+                    <div class="hero-stats animate__animated animate__fadeInUp animate__delay-2s">
+                        <div class="hero-stat">
+                            <span class="hero-stat-number">50+</span>
+                            <span class="hero-stat-label">Projects</span>
+                        </div>
+                        <div class="hero-stat">
+                            <span class="hero-stat-number">3</span>
+                            <span class="hero-stat-label">Specialties</span>
+                        </div>
+                        <div class="hero-stat">
+                            <span class="hero-stat-number">100%</span>
+                            <span class="hero-stat-label">Passion</span>
+                        </div>
+                    </div>
+                    
+                    <div class="hero-buttons animate__animated animate__fadeInUp animate__delay-3s">
+                        <a href="#featured-projects" class="btn-primary-hero">
+                            <i class="fas fa-play me-2"></i>
+                            Explore Portfolio
+                        </a>
+                        <a href="#connect" class="btn-secondary-hero">
+                            <i class="fas fa-envelope me-2"></i>
+                            Get in Touch
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Scroll Indicator -->
+        <div class="hero-scroll-indicator">
+            <i class="fas fa-chevron-down"></i>
+            <span>Scroll Down</span>
+        </div>
+    </header>
+
+    <!-- About Section -->
+    <section id="about">
+        <h2 class="section-title" data-aos="fade-up"><i class="fas fa-star"></i> About Me</h2>
+        <div class="container" data-aos="fade-up" data-aos-delay="200">
+            <div class="row justify-content-center">
+                <div class="col-md-8 text-center">
+                    <p>Lat Luchukomol – a creative professional blending photography, dance, and social media storytelling.</p>
+                    <p>Here you'll find a curated selection of my photography projects, dance concepts, and creative experiments.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Projects Section -->
+    <section id="featured-projects">
+        <h2 class="section-title" data-aos="fade-up"><i class="fas fa-trophy"></i> Featured Projects</h2>
+        <div class="container">
+            <div class="row" data-aos="fade-up" data-aos-delay="200">
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <a href="https://www.behance.net/gallery/227629025/TIDE-Bang-Saray" target="_blank" rel="noopener noreferrer" class="project-link">
+                        <div class="card featured-project-card">
+                            <img src="https://mir-s3-cdn-cf.behance.net/project_modules/source/fd5d72227629025.6843515be3167.jpg" class="card-img-top" alt="TIDE Bang Saray Photography Project" loading="lazy" onerror="this.style.display='none'">
+                            <div class="project-badge">📸 Photography</div>
+                            <div class="card-body">
+                                <h5 class="card-title">TIDE Bang Saray</h5>
+                                <p class="card-subtitle mb-2 text-muted">Commercial Photography</p>
+                                <p class="card-text">A stunning photography series capturing the essence of coastal beauty and modern lifestyle at Bang Saray.</p>
+                                <small class="text-muted"><i class="fab fa-behance"></i> View on Behance</small>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <a href="https://www.behance.net/gallery/223013739/WANAREE-%28%29-The-Art-of-Thai-Japanese-Dessert" target="_blank" rel="noopener noreferrer" class="project-link">
+                        <div class="card featured-project-card">
+                            <img src="https://mir-s3-cdn-cf.behance.net/project_modules/source/0fe1db223013739.67f1333a9abb2.jpg" class="card-img-top" alt="WANAREE Thai Japanese Dessert Photography" loading="lazy" onerror="this.style.display='none'">
+                            <div class="project-badge">🍰 Food Photography</div>
+                            <div class="card-body">
+                                <h5 class="card-title">WANAREE (和菓) - The Art of Thai-Japanese Dessert</h5>
+                                <p class="card-subtitle mb-2 text-muted">Food & Lifestyle Photography</p>
+                                <p class="card-text">An artistic exploration of fusion desserts, blending Thai and Japanese culinary traditions through visual storytelling.</p>
+                                <small class="text-muted"><i class="fab fa-behance"></i> View on Behance</small>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <a href="https://www.behance.net/gallery/222907947/Esmon-x-Fenty-Beauty-A-First-Light" target="_blank" rel="noopener noreferrer" class="project-link">
+                        <div class="card featured-project-card">
+                            <img src="https://mir-s3-cdn-cf.behance.net/project_modules/source/93aa69222907947.67eefddbd3227.jpg" class="card-img-top" alt="Esmon x Fenty Beauty - A First Light Photography" loading="lazy" onerror="this.style.display='none'">
+                            <div class="project-badge">💄 Beauty Photography</div>
+                            <div class="card-body">
+                                <h5 class="card-title">Esmon x Fenty Beauty - A First Light</h5>
+                                <p class="card-subtitle mb-2 text-muted">Beauty & Portrait Photography</p>
+                                <p class="card-text">An elegant collaboration capturing the essence of modern beauty through stunning lighting and composition.</p>
+                                <small class="text-muted"><i class="fab fa-behance"></i> View on Behance</small>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Photography Projects Section -->
+    <section id="photography">
+        <h2 class="section-title" data-aos="fade-up"><i class="fas fa-camera-retro"></i> Photography Projects</h2>
+        <div class="container">
+            <div class="row" data-aos="fade-up" data-aos-delay="200">
+                <div class="col-lg-6 col-md-12 mb-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Cafe Shoot</h5>
+                            <p class="card-subtitle mb-2 text-muted">Mar 2025</p>
+                            <p class="card-text">Lifestyle & coffee culture photography, capturing moments in vibrant cafe settings.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-12 mb-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Dance Studio</h5>
+                            <p class="card-subtitle mb-2 text-muted">Feb 2025</p>
+                            <p class="card-text">Dynamic portraits & motion shots, utilizing studio lighting to emphasize movement.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Enhanced Gallery Section with New Images -->
+    <section id="gallery">
+        <h2 class="section-title" data-aos="fade-up"><i class="fas fa-images"></i> Gallery</h2>
+        <div class="container" data-aos="fade-up" data-aos-delay="200">
+            <div id="galleryCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="5000">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#galleryCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#galleryCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#galleryCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                    <button type="button" data-bs-target="#galleryCarousel" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                    <button type="button" data-bs-target="#galleryCarousel" data-bs-slide-to="4" aria-label="Slide 5"></button>
+                    <button type="button" data-bs-target="#galleryCarousel" data-bs-slide-to="5" aria-label="Slide 6"></button>
+                    <button type="button" data-bs-target="#galleryCarousel" data-bs-slide-to="6" aria-label="Slide 7"></button>
+                    <button type="button" data-bs-target="#galleryCarousel" data-bs-slide-to="7" aria-label="Slide 8"></button>
+                    <button type="button" data-bs-target="#galleryCarousel" data-bs-slide-to="8" aria-label="Slide 9"></button>
+                    <button type="button" data-bs-target="#galleryCarousel" data-bs-slide-to="9" aria-label="Slide 10"></button>
+                    <button type="button" data-bs-target="#galleryCarousel" data-bs-slide-to="10" aria-label="Slide 11"></button>
+                    <button type="button" data-bs-target="#galleryCarousel" data-bs-slide-to="11" aria-label="Slide 12"></button>
+                    <button type="button" data-bs-target="#galleryCarousel" data-bs-slide-to="12" aria-label="Slide 13"></button>
+                </div>
+                <div class="carousel-inner">
+                    <!-- Original Images -->
+                    <div class="carousel-item active">
+                        <img src="https://mir-s3-cdn-cf.behance.net/project_modules/source/151008222907947.67eefd419dcd2.jpg" class="d-block w-100" alt="Esmon x Fenty Beauty - First Light beauty photography" loading="lazy" onerror="this.src='data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iODAwIiBoZWlnaHQ9IjQwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjNjY3ZWVhIi8+PHRleHQgeD0iNTAlIiB5PSI1MCUiIGZvbnQtZmFtaWx5PSJBcmlhbCIgZm9udC1zaXplPSIyNCIgZmlsbD0iI2ZmZiIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZHk9Ii4zZW0iPkJlYXV0eSAmIExpZ2h0PC90ZXh0Pjwvc3ZnPic">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>Beauty & Light</h5>
+                            <p>Professional beauty photography showcasing natural elegance.</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="https://mir-s3-cdn-cf.behance.net/project_modules/source/93aa69222907947.67eefddbd3227.jpg" class="d-block w-100" alt="Esmon x Fenty Beauty - Portrait series" loading="lazy" onerror="this.src='data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iODAwIiBoZWlnaHQ9IjQwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjNzY0YmEyIi8+PHRleHQgeD0iNTAlIiB5PSI1MCUiIGZvbnQtZmFtaWx5PSJBcmlhbCIgZm9udC1zaXplPSIyNCIgZmlsbD0iI2ZmZiIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZHk9Ii4zZW0iPlBvcnRyYWl0IE1hc3Rlcnk8L3RleHQ+PC9zdmc+'">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>Portrait Mastery</h5>
+                            <p>Capturing authentic moments through expert composition.</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="https://mir-s3-cdn-cf.behance.net/project_modules/source/0fe1db223013739.67f1333a9abb2.jpg" class="d-block w-100" alt="Thai Japanese dessert photography showcasing artistic plating" loading="lazy" onerror="this.src='data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iODAwIiBoZWlnaHQ9IjQwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjZmY5YTllIi8+PHRleHQgeD0iNTAlIiB5PSI1MCUiIGZvbnQtZmFtaWx5PSJBcmlhbCIgZm9udC1zaXplPSIyNCIgZmlsbD0iI2ZmZiIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZHk9Ii4zZW0iPkN1bGluYXJ5IEFydGlzdHJ5PC90ZXh0Pjwvc3ZnPic">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>Culinary Artistry</h5>
+                            <p>The delicate beauty of Thai-Japanese dessert fusion.</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="https://mir-s3-cdn-cf.behance.net/project_modules/source/fd5d72227629025.6843515be3167.jpg" class="d-block w-100" alt="Coastal lifestyle photography at Bang Saray" loading="lazy" onerror="this.src='data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iODAwIiBoZWlnaHQ9IjQwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjZmVjZmVmIi8+PHRleHQgeD0iNTAlIiB5PSI1MCUiIGZvbnQtZmFtaWx5PSJBcmlhbCIgZm9udC1zaXplPSIyNCIgZmlsbD0iIzMzMyIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZHk9Ii4zZW0iPkNvYXN0YWwgRWxlZ2FuY2U8L3RleHQ+PC9zdmc+'">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>Coastal Elegance</h5>
+                            <p>Capturing the serene beauty of seaside living.</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="https://mir-s3-cdn-cf.behance.net/project_modules/source/ee14fd223041717.67f1d93891492.jpg" class="d-block w-100" alt="Artistic lifestyle photography with natural elements" loading="lazy" onerror="this.src='data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iODAwIiBoZWlnaHQ9IjQwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjNjY3ZWVhIi8+PHRleHQgeD0iNTAlIiB5PSI1MCUiIGZvbnQtZmFtaWx5PSJBcmlhbCIgZm9udC1zaXplPSIyNCIgZmlsbD0iI2ZmZiIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZHk9Ii4zZW0iPk5hdHVyYWwgRWxlbWVudHM8L3RleHQ+PC9zdmc+'">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>Natural Elements</h5>
+                            <p>Harmonious blend of nature and artistic vision.</p>
+                        </div>
+                    </div>
+                    
+                    <!-- New Images Added -->
+                    <div class="carousel-item">
+                        <img src="https://mir-s3-cdn-cf.behance.net/project_modules/source/86ab49222998213.67f0e5bf94d91.jpg" class="d-block w-100" alt="Creative portrait photography with artistic composition" loading="lazy" onerror="this.src='data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iODAwIiBoZWlnaHQ9IjQwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjNzY0YmEyIi8+PHRleHQgeD0iNTAlIiB5PSI1MCUiIGZvbnQtZmFtaWx5PSJBcmlhbCIgZm9udC1zaXplPSIyNCIgZmlsbD0iI2ZmZiIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZHk9Ii4zZW0iPkFydGlzdGljIFZpc2lvbjwvdGV4dD48L3N2Zz4='">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>Artistic Vision</h5>
+                            <p>Creative portrait photography exploring artistic composition and lighting.</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="https://mir-s3-cdn-cf.behance.net/project_modules/source/a541df222998213.67f0e5bf977dc.jpg" class="d-block w-100" alt="Contemporary photography with modern aesthetics" loading="lazy" onerror="this.src='data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iODAwIiBoZWlnaHQ9IjQwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc"></textarea>
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>Creative Composition</h5>
+                            <p>Innovative compositions blending artistic elements with modern photography.</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="https://mir-s3-cdn-cf.behance.net/project_modules/source/ed4864226592581.6830cb8200b34.jpg" class="d-block w-100" alt="Dynamic portrait with professional lighting" loading="lazy" onerror="this.src='data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iODAwIiBoZWlnaHQ9IjQwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjZmY5YTllIi8+PHRleHQgeD0iNTAlIiB5PSI1MCUiIGZvbnQtZmFtaWx5PSJBcmlhbCIgZm9udC1zaXplPSIyNCIgZmlsbD0iI2ZmZiIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZHk9Ii4zZW0iPkR5bmFtaWMgUG9ydHJhaXRzPC90ZXh0Pjwvc3ZnPic">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>Dynamic Portraits</h5>
+                            <p>Energetic portrait photography capturing personality and character.</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="https://mir-s3-cdn-cf.behance.net/project_modules/source/ec6d98226592581.6830cb8202b75.jpg" class="d-block w-100" alt="Fashion photography with modern styling" loading="lazy" onerror="this.src='data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iODAwIiBoZWlnaHQ9IjQwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjZmVjZmVmIi8+PHRleHQgeD0iNTAlIiB5PSI1MCUiIGZvbnQtZmFtaWx5PSJBcmlhbCIgZm9udC1zaXplPSIyNCIgZmlsbD0iIzMzMyIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZHk9Ii4zZW0iPkZhc2hpb24gU3R5bGluZzwvdGV4dD48L3N2Zz4='">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>Fashion Styling</h5>
+                            <p>Contemporary fashion photography with sophisticated styling and composition.</p>
+                        </div>
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#galleryCarousel" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#galleryCarousel" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Dance & Social Media Ideas Section -->
+    <section id="dance">
+        <h2 class="section-title" data-aos="fade-up"><i class="fas fa-music"></i> Dance & Social Media Ideas</h2>
+        <div class="container" data-aos="fade-up" data-aos-delay="200">
+            <div class="row justify-content-center">
+                <div class="col-md-8">
+                    <ul class="list-group">
+                        <li class="list-group-item">🌸 TikTok challenge: #FlowerStep - A unique and trending dance challenge.</li>
+                        <li class="list-group-item">🎷 Dance cover: "Smooth Operator" – Jazz style - A sophisticated and smooth performance.</li>
+                        <li class="list-group-item">📸 Photo set: Black & Yellow fashion shoot - High-contrast fashion photography concept.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills & Tools Section -->
+    <section id="skills">
+        <h2 class="section-title" data-aos="fade-up"><i class="fas fa-tools"></i> Skills & Tools</h2>
+        <div class="container skills-grid" data-aos="fade-up" data-aos-delay="200">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title"><i class="fas fa-camera"></i> Photography</h5>
+                    <p>Sony A7 III, Sony A7C, Adobe Lightroom & Photoshop</p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title"><i class="fas fa-music"></i> Dance Styles</h5>
+                    <p>Jazz, Street Jazz, R&B, Girl's Style</p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title"><i class="fas fa-video"></i> Content Creation</h5>
+                    <p>Video editing, social media planning</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Connect Section -->
+    <section id="connect">
+        <h2 class="section-title" data-aos="fade-up"><i class="fas fa-envelope"></i> Connect with Me</h2>
+        <div class="container" data-aos="fade-up" data-aos-delay="200">
+            <div class="connect-links">
+                <a href="https://behance.net/latuchukomol" target="_blank" rel="noopener noreferrer"><i class="fab fa-behance"></i> Behance</a>
+                <a href="https://instagram.com/luchukomol" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i> Instagram</a>
+                <a href="mailto:bankki2fastpic@gmail.com"><i class="fas fa-envelope"></i> Email</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>"Difficult, not Impossible"</p>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>
+        // Initialize AOS
+        AOS.init({
+            once: true,
+            duration: 1000,
+            easing: 'ease-out-cubic',
+        });
+
+        // Smooth scrolling for navigation
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Enhanced parallax effect for hero background with error handling
+        let ticking = false;
+        
+        function updateParallax() {
+            const scrolled = window.pageYOffset;
+            const heroImages = document.querySelector('.hero-bg-images');
+            
+            if (heroImages && scrolled < window.innerHeight) {
+                try {
+                    heroImages.style.transform = `translateY(${scrolled * 0.5}px)`;
+                } catch (error) {
+                    console.warn('Parallax effect disabled due to performance constraints');
+                }
+            }
+            ticking = false;
+        }
+
+        function requestParallaxTick() {
+            if (!ticking) {
+                requestAnimationFrame(updateParallax);
+                ticking = true;
+            }
+        }
+
+        // Only add scroll listener if user hasn't requested reduced motion
+        if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+            window.addEventListener('scroll', requestParallaxTick);
+        }
+
+        // Enhanced image error handling for both hero and gallery
+        function handleImageErrors() {
+            // Hero background images
+            const heroItems = document.querySelectorAll('.hero-bg-item');
+            
+            heroItems.forEach((item, index) => {
+                const img = new Image();
+                const bgImage = window.getComputedStyle(item).backgroundImage;
+                
+                if (bgImage && bgImage !== 'none') {
+                    const url = bgImage.slice(4, -1).replace(/["']/g, "");
+                    img.src = url;
+                    
+                    img.onerror = function() {
+                        // Add fallback styling for failed images
+                        item.style.backgroundColor = `hsl(${240 + (index * 20)}, 70%, 60%)`;
+                        item.style.backgroundImage = 'none';
+                        console.warn(`Background image failed to load: ${url}`);
+                    };
+                }
+            });
+
+            // Gallery images
+            const galleryImages = document.querySelectorAll('#galleryCarousel img');
+            
+            galleryImages.forEach((img, index) => {
+                img.addEventListener('error', function() {
+                    console.warn(`Gallery image failed to load: ${this.src}`);
+                    // The SVG fallback is already handled by the onerror attribute
+                });
+                
+                img.addEventListener('load', function() {
+                    console.log(`Gallery image loaded successfully: ${this.alt}`);
+                });
+            });
+        }
+
+        // Enhanced carousel touch support for mobile
+        const carousel = document.querySelector('#galleryCarousel');
+        if (carousel && 'ontouchstart' in window) {
+            let touchStartX = 0;
+            let touchEndX = 0;
+
+            carousel.addEventListener('touchstart', function(e) {
+                touchStartX = e.changedTouches[0].screenX;
+            }, { passive: true });
+
+            carousel.addEventListener('touchend', function(e) {
+                touchEndX = e.changedTouches[0].screenX;
+                handleGesture();
+            }, { passive: true });
+
+            function handleGesture() {
+                const swipeThreshold = 50;
+                const carouselInstance = bootstrap.Carousel.getInstance(carousel);
+                
+                if (carouselInstance) {
+                    if (touchEndX < touchStartX - swipeThreshold) {
+                        carouselInstance.next();
+                    }
+                    if (touchEndX > touchStartX + swipeThreshold) {
+                        carouselInstance.prev();
+                    }
+                }
+            }
+        }
+
+        // Performance optimization: Lazy loading for background images
+        function lazyLoadBackgroundImages() {
+            const heroItems = document.querySelectorAll('.hero-bg-item');
+            const imageObserver = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const bgImage = window.getComputedStyle(entry.target).backgroundImage;
+                        if (bgImage !== 'none') {
+                            entry.target.style.backgroundImage = bgImage;
+                        }
+                        observer.unobserve(entry.target);
+                    }
+                });
+            });
+
+            heroItems.forEach(item => {
+                imageObserver.observe(item);
+            });
+        }
+
+        // Gallery image preloading for better performance
+        function preloadGalleryImages() {
+            const galleryImages = [
+                'https://mir-s3-cdn-cf.behance.net/project_modules/source/151008222907947.67eefd419dcd2.jpg',
+                'https://mir-s3-cdn-cf.behance.net/project_modules/source/93aa69222907947.67eefddbd3227.jpg',
+                'https://mir-s3-cdn-cf.behance.net/project_modules/source/0fe1db223013739.67f1333a9abb2.jpg',
+                'https://mir-s3-cdn-cf.behance.net/project_modules/source/fd5d72227629025.6843515be3167.jpg',
+                'https://mir-s3-cdn-cf.behance.net/project_modules/source/ee14fd223041717.67f1d93891492.jpg',
+                'https://mir-s3-cdn-cf.behance.net/project_modules/source/86ab49222998213.67f0e5bf94d91.jpg',
+                'https://mir-s3-cdn-cf.behance.net/project_modules/source/a541df222998213.67f0e5bf977dc.jpg',
+                'https://mir-s3-cdn-cf.behance.net/project_modules/source/c50064222998213.67f0e5bf958dc.jpg',
+                'https://mir-s3-cdn-cf.behance.net/project_modules/source/beb994226592581.6830d3593b01b.jpg',
+                'https://mir-s3-cdn-cf.behance.net/project_modules/source/368905226592581.6830d3592df97.jpg',
+                'https://mir-s3-cdn-cf.behance.net/project_modules/source/ed4864226592581.6830cb8200b34.jpg',
+                'https://mir-s3-cdn-cf.behance.net/project_modules/source/ec6d98226592581.6830cb8202b75.jpg'
+            ];
+
+            galleryImages.forEach((src, index) => {
+                setTimeout(() => {
+                    const img = new Image();
+                    img.src = src;
+                    img.onload = () => console.log(`Preloaded image ${index + 1}/${galleryImages.length}`);
+                    img.onerror = () => console.warn(`Failed to preload image: ${src}`);
+                }, index * 100); // Stagger the loading
+            });
+        }
+
+        // Auto-play carousel with pause on hover
+        function setupCarouselControls() {
+            const carouselElement = document.querySelector('#galleryCarousel');
+            if (carouselElement) {
+                const carousel = new bootstrap.Carousel(carouselElement, {
+                    interval: 5000,
+                    wrap: true,
+                    pause: 'hover'
+                });
+
+                // Add keyboard navigation
+                document.addEventListener('keydown', function(e) {
+                    if (e.key === 'ArrowLeft') {
+                        carousel.prev();
+                    } else if (e.key === 'ArrowRight') {
+                        carousel.next();
+                    }
+                });
+            }
+        }
+
+        // Initialize error handling and features when DOM is ready
+        document.addEventListener('DOMContentLoaded', function() {
+            handleImageErrors();
+            setupCarouselControls();
+            
+            // Add intersection observer for performance if supported
+            if ('IntersectionObserver' in window) {
+                lazyLoadBackgroundImages();
+            }
+
+            // Preload gallery images after a short delay
+            setTimeout(preloadGalleryImages, 2000);
+        });
+
+        // Network connectivity handling
+        window.addEventListener('online', function() {
+            console.log('Connection restored - reloading failed images');
+            handleImageErrors();
+            preloadGalleryImages();
+        });
+
+        window.addEventListener('offline', function() {
+            console.log('Connection lost - some images may not display');
+        });
+
+        // Performance monitoring
+        if ('requestIdleCallback' in window) {
+            requestIdleCallback(function() {
+                console.log('Portfolio loaded and optimized for performance');
+            });
+        }
+    </script>
+</body>
+</html>
